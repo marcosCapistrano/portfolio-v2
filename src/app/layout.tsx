@@ -1,7 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Inter, Poppins } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' })
+const poppins = Poppins({ subsets: ['latin'], display: 'swap' ,weight: ['300', '400', '700'], variable: '--font-poppins' })
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} scroll-smooth`}>
+      <body>{children}</body>
     </html>
   )
 }
