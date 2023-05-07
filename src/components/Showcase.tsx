@@ -18,11 +18,11 @@ function Showcase() {
             <nav className='bg-color1 text-white font-bold mt-16 sticky top-0'>
                 <div className="container flex items-center">
                     <a href="#top">
-                        <HomeIcon className="w-12 h-12" />
+                        <HomeIcon className="w-8 h-8" />
                     </a>
                     <div className="flex ml-auto items-center gap-8">
-                        <button onClick={() => setSelected(Selection.EXPERIENCE)} className={`fs500 py-4 transition duration-300 ${selected === Selection.EXPERIENCE && 'border-b-4'}`}>Experiência</button>
-                        <button onClick={() => setSelected(Selection.PROJECTS)} className={`fs500 py-4 transition duration-300 ${selected === Selection.PROJECTS && 'border-b-4'}`}>Projetos</button>
+                        <button onClick={() => setSelected(Selection.EXPERIENCE)} className={`fs400 py-4 transition duration-300 ${selected === Selection.EXPERIENCE && 'border-b-4'}`}>Experiência</button>
+                        <button onClick={() => setSelected(Selection.PROJECTS)} className={`fs400 py-4 transition duration-300 ${selected === Selection.PROJECTS && 'border-b-4'}`}>Projetos</button>
                     </div>
                 </div>
             </nav>
