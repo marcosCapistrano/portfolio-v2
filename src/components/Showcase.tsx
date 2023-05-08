@@ -3,18 +3,19 @@ import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Experience from "./Experience";
-import { myExperience } from "@/data/data";
+import Project from "./Project";
+import { myExperience, myProjects } from "@/data/data";
 
 enum Selection {
     EXPERIENCE = 1,
     PROJECTS
 }
 
-function Showcase() {
+function Showcase({id} : {id: string}) {
     const [selected, setSelected] = useState(Selection.EXPERIENCE);
 
     return (
-        <div className="min-h-screen">
+        <div id={id} className="min-h-screen">
             <nav className='bg-color1 text-white font-bold mt-16 sticky top-0'>
                 <div className="container flex items-center">
                     <a href="#top">
@@ -36,7 +37,13 @@ function Showcase() {
                     )}
                     </div>
              ) : (
-                <div>Work in progress..</div>
+                <div className="container flex flex-col items-center text-justify md:text-center lg:grid lg:grid-cols-12 lg:text-left py-8 gap-8 ">
+                    {myProjects && myProjects.length > 0 && (
+                        myProjects.map((project, i) => (
+                            <Project key={i} project={project} />
+                        ))
+                    )}
+                    </div>
             )}
         </div>
     )

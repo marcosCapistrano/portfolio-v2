@@ -40,4 +40,34 @@ export const myExperience: ExperienceData[] = [{
     link: "/",
 },
 
+]
+
+export type ProjectData = {
+    titleSm: string,
+    titleLg: string,
+    timePeriod: string,
+    description: string,
+    list?: string[],
+    image: string,
+    imageAlt: string,
+    link: string,
+    demoLink: string,
+}
+
+export const myProjects: ProjectData[] = [{
+    titleSm: "",
+    titleLg: "Space Tourism",
+    timePeriod: "NextJS, CSS Modules, Responsive Design",
+    description: "Originalmente feito segundo um curso de HTML e CSS avançado de Kevin Powell e Frontend Mentors, este projeto foi realizado para praticar modularização de CSS, design responsivo e NextJS",
+    list: [
+        "NextJS",
+        "CSS Global e CSS Modules exemplificando a modularização de CSS",
+        "CSS Grid",
+        "Design Responsivo"
+    ],
+    image: "/images/space-tourism.png",
+    imageAlt: "Soil Tecnologia",
+    link: "https://github.com/marcosCapistrano/space-tourism-nextjs",
+    demoLink: "https://space-tourism-nextjs-ruddy.vercel.app/",
+},
 ] 

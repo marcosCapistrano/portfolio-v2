@@ -21,7 +21,7 @@ function Experience({experience}: {experience: ExperienceData}) {
                     ))}
                 </ul>
                 )}
-                <a href={link} className='rounded-md block mt-4 mx-auto lg:mx-0 md:max-w-fit text-center md:text-left font-bold py-2 px-4 border-black border-2 transition duration-150 hover:border-color1 hover:text-color1'>Saiba Mais</a>
+                {/* <a href={link} className='rounded-md block mt-4 mx-auto lg:mx-0 md:max-w-fit text-center md:text-left font-bold py-2 px-4 border-black border-2 transition duration-150 hover:border-color1 hover:text-color1'>Saiba Mais</a> */}
             </div>
         </>
     );
